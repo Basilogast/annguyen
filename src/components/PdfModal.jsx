@@ -39,7 +39,7 @@ function PdfModal({ isOpen, onRequestClose, pdfUrl, text, detailsRoute, id, sign
 
   const handleEdit = () => {
     // Redirect to the edit page with the workcard ID and targetTable
-    navigate(`/NguyenDoThienAn/edit-work/${targetTable}/${id}`);
+    navigate(`/edit-work/${targetTable}/${id}`);
   };
   
   return (

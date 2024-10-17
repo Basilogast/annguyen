@@ -56,7 +56,7 @@ function NotFound() {
         <h2 style={styles.subtitle}>Page Not Found</h2>
         <p style={styles.text}>Oops! The page you’re looking for doesn’t exist.</p>
         <a
-          href="/NguyenDoThienAn/"
+          href="/"
           style={styles.button}
           onMouseOver={(e) => (e.target.style.backgroundColor = styles.buttonHover.backgroundColor)}
           onMouseOut={(e) => (e.target.style.backgroundColor = styles.button.backgroundColor)}

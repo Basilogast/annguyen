@@ -24,7 +24,7 @@ export const OTEKER = () => {
   return (
     <section className="workPage">
       <Container>
-        <Link to="/NguyenDoThienAn" className="btnHome">
+        <Link to="/" className="btnHome">
           Return to Homepage
         </Link>
         <h2>DR.OTEKER x THE LAMP</h2>

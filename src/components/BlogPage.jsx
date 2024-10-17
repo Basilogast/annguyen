@@ -60,7 +60,7 @@ export default function BlogPage() {
           The blog post you're looking for doesn't exist or has been removed.
         </p>
         <a
-          href="/NguyenDoThienAn/"
+          href="/"
           style={{
             textDecoration: "none",
             color: "#007bff",

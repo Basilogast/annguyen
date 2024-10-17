@@ -139,7 +139,7 @@ function EditWorkCard() {
 
       if (response.ok) {
         alert("Workcard updated successfully");
-        navigate("/NguyenDoThienAn/"); // Redirect to the main page
+        navigate("/"); // Redirect to the main page
         window.location.reload();
       } else {
         alert("Failed to update workcard");
@@ -154,7 +154,7 @@ function EditWorkCard() {
 
   return (
     <Container style={{ paddingTop: "50px" }}>
-      <Link to="/NguyenDoThienAn" className="btnHome">
+      <Link to="/" className="btnHome">
         Return to Homepage
       </Link>
       <Container className="add-workcard-container">

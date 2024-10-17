@@ -49,7 +49,7 @@ export const Competition = ({ comCards, signedInUser }) => {
         {/* Display "Add Pitch" button only when user is signed in */}
         {signedInUser && (
           <div style={styles.buttonContainer}>
-            <Link to="/NguyenDoThienAn/add-competition">
+            <Link to="/add-competition">
               <Button
                 style={{
                   ...styles.buttonStyle,

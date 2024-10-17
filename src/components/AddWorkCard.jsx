@@ -94,7 +94,7 @@ export const AddWorkCard = ({ addNewWorkCard, targetTable }) => {
         setLoading(false);
 
         // Navigate back to the homepage after submission
-        navigate("/NguyenDoThienAn/");
+        navigate("/");
       } else {
         console.error("addNewWorkCard is not a function");
       }
@@ -107,7 +107,7 @@ export const AddWorkCard = ({ addNewWorkCard, targetTable }) => {
 
   return (
     <Container style={{ paddingTop: "50px" }}>
-      <Link to="/NguyenDoThienAn" className="btnHome">
+      <Link to="/" className="btnHome">
         Return to Homepage
       </Link>
       <Container className="add-workcard-container">

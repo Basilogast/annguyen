@@ -39,7 +39,7 @@ export const HONGKONG = () => {
   return (
     <section className="workPage">
       <Container>
-        <Link to="/NguyenDoThienAn" className="btnHome">
+        <Link to="/" className="btnHome">
           Return to Homepage
         </Link>
         <h2>HONGKONG MOONCAKE x THE LAMP</h2>
