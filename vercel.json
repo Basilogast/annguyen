@@ -1,8 +1,5 @@
 {
   "rewrites": [
-    {
-      "source": "/NguyenDoThienAn/(.*)",
-      "destination": "/NguyenDoThienAn/index.html"
-    }
+    { "source": "/(.*)", "destination": "/" }
   ]
 }
