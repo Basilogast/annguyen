@@ -1,0 +1,918 @@
+/************ Custom Font ************/
+@font-face {
+  font-family: Centra;
+  src: url("./assets/fonts/CentraNo2-Bold.ttf");
+  font-weight: 700;
+}
+@font-face {
+  font-family: Questrial;
+  src: url("./assets/fonts/Questrial-Regular.ttf");
+  font-weight: 500;
+}
+@font-face {
+  font-family: Centra;
+  src: url("./assets/fonts/CentraNo2-Book.ttf");
+  font-weight: 400;
+}
+@font-face {
+  font-family: SpaceMono;
+  src: url("./assets/fonts/SpaceMono-Regular.ttf");
+  font-weight: 500;
+}
+
+/************ Default Css ************/
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style-type: none;
+}
+
+:root {
+  --primary: #6a59ff;
+  --white: #ffffff;
+  --bg: #f5f5f5;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 75px;
+}
+
+body {
+  font-weight: 500;
+  overflow-x: hidden;
+  /* position: relative; */
+  background-color: #121212 !important;
+  color: #fff !important;
+  font-family: "Questrial", sans-serif !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+  line-height: normal;
+}
+
+p,
+a,
+li,
+button,
+ul {
+  margin: 0;
+  padding: 0;
+  line-height: normal;
+  text-decoration: none;
+}
+
+/* a:hover {
+  text-decoration: none;
+} */
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+button {
+  border: 0;
+  background-color: transparent;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+}
+
+@media (max-width: 576px) {
+  .hero{
+    padding-top: 100px;
+  }
+  /* .banner .tagline{
+    font-size: 15px;
+  }
+  .banner h1{
+    font-size: 48.75px;
+  }
+  .banner p{
+    font-size: 13.5px;
+  } */
+}
+@media (max-width: 768px) and (min-width: 576px) {
+  .hero{
+    padding-top: 100px;
+  }
+  .heroImgContainer{
+    display: none;
+  }
+  /* .banner .tagline{
+    font-size: 15px;
+  }
+  .banner h1{
+    font-size: 48.75px;
+  }
+  .banner p{
+    font-size: 13.5px;
+  } */
+}
+@media (max-width: 992px) and (min-width: 768px) {
+}
+@media (max-width: 1200px) and (min-width: 992px) {
+}
+@media (min-width: 1200px) {
+}
+@media (min-width: 1700px) {
+  main .container {
+    max-width: 100%;
+    padding: 0 150px;
+  }
+}
+
+p.success {
+  color: green;
+}
+
+p.danger {
+  color: red;
+}
+
+/************ Navbar Css ************/
+.navLogoContainer{
+  /* max-width: 100px; */
+  color: white;
+  font-size: 19px;
+}
+nav.navbar {
+  padding: 18px 0;
+  min-width: 400px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 9999;
+  transition: 0.32s ease-in-out;
+}
+nav.navbar.scrolled {
+  padding: 0px 0;
+  background-color: #121212;
+}
+nav.navbar a.navbar-brand {
+  width: 9%;
+}
+nav.navbar .navbar-nav .nav-link.navbar-link {
+  font-weight: 400;
+  color: #fff !important;
+  letter-spacing: 0.8px;
+  padding: 0 25px;
+  font-size: 18px;
+  opacity: 0.75;
+}
+nav.navbar .navbar-nav a.nav-link.navbar-link:hover,
+nav.navbar .navbar-nav a.nav-link.navbar-link.active {
+  opacity: 1;
+}
+span.navbar-text {
+  display: flex;
+  align-items: center;
+}
+.social-icon {
+  display: inline-block;
+  margin-left: 14px;
+}
+.social-icon a {
+  width: 42px;
+  height: 42px;
+  background: rgba(217, 217, 217, 0.1);
+  display: inline-flex;
+  border-radius: 50%;
+  margin-right: 6px;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+}
+.social-icon a::before {
+  content: "";
+  width: 42px;
+  height: 42px;
+  position: absolute;
+  background-color: #ffffff;
+  border-radius: 50%;
+  transform: scale(0);
+  transition: 0.3s ease-in-out;
+}
+.social-icon a:hover::before {
+  transform: scale(1);
+}
+.social-icon a img {
+  width: 40%;
+  z-index: 1;
+  transition: 0.3s ease-in-out;
+}
+.social-icon a:hover img {
+  filter: brightness(0) saturate(100%) invert(0%) sepia(7%) saturate(98%)
+    hue-rotate(346deg) brightness(95%) contrast(86%);
+}
+.navbar-text button {
+  font-weight: 700;
+  color: #fff;
+  border: 1px solid #fff;
+  padding: 18px 34px;
+  font-size: 18px;
+  margin-left: 18px;
+  position: relative;
+  background-color: transparent;
+  transition: 0.3s ease-in-out;
+}
+.navbar-text button span {
+  z-index: 1;
+}
+.navbar-text button::before {
+  content: "";
+  width: 0%;
+  height: 100%;
+  position: absolute;
+  background-color: #fff;
+  left: 0;
+  top: 0;
+  z-index: -1;
+  transition: 0.3s ease-in-out;
+}
+.navbar-text button:hover {
+  color: #121212;
+}
+.navbar-text button:hover::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+nav.navbar .navbar-toggler:active,
+nav.navbar .navbar-toggler:focus {
+  outline: none;
+  box-shadow: none;
+}
+nav.navbar .navbar-toggler-icon {
+  width: 24px;
+  height: 17px;
+  background-image: none;
+  position: relative;
+  border-bottom: 2px solid #fff;
+  transition: all 300ms linear;
+  top: -2px;
+}
+nav.navbar .navbar-toggler-icon:focus {
+  border-bottom: 2px solid #fff;
+}
+nav.navbar .navbar-toggler-icon:after,
+nav.navbar .navbar-toggler-icon:before {
+  width: 24px;
+  position: absolute;
+  height: 2px;
+  background-color: #fff;
+  top: 0;
+  left: 0;
+  content: "";
+  z-index: 2;
+  transition: all 300ms linear;
+}
+nav.navbar .navbar-toggler-icon:after {
+  top: 8px;
+}
+nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:after {
+  transform: rotate(45deg);
+  background-color: #fff;
+  height: 2px;
+}
+nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:before {
+  transform: translateY(8px) rotate(-45deg);
+  background-color: #fff;
+  height: 2px;
+}
+nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
+  border-color: transparent;
+}
+
+/************ Hero Css ************/
+.hero {
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #121212; /* Dark background */
+  padding: 0 0;
+  color: #f5f5f5; /* Light text */
+}
+
+.heroImgContainer {
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  transition: transform 0.5s ease-in-out;
+}
+
+.heroImgContainer img {
+  height: 100vh;
+  width: auto;
+  transition: transform 0.5s ease-in-out, opacity 0.5s;
+}
+
+.heroImgContainer:hover img {
+  transform: scale(1.1); /* Zoom effect */
+  opacity: 0.8; /* Slight fade effect */
+}
+
+.hero .textRotate {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #f5f5f5; /* Light color for rotating text */
+}
+
+.hero h1 {
+  font-size: 64px;
+  color: #fff;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.hero .Para {
+  font-size: 22px;
+  max-width: 600px;
+  color: #e0e0e0; /* Slightly lighter text */
+  margin-bottom: 40px; /* Increased margin for better spacing */
+}
+
+.hero .workBtn,
+.hero .contactBtn {
+  border-radius: 30px;
+  font-size: 20px;
+  padding: 12px 35px;
+  margin-right: 20px; /* Increased space between buttons */
+  transition: all 0.4s ease-in-out;
+}
+
+.hero .workBtn {
+  background-color: #ffffff;
+  color: #000000;
+  border: none;
+}
+
+.hero .workBtn:hover {
+  background-color: #000000;
+  color: #fff;
+  transform: scale(1.1);
+}
+
+.hero .contactBtn {
+  color: #fff;
+  border: 2px solid #fff;
+  background: transparent;
+}
+
+.hero .contactBtn:hover {
+  background-color: #ffffff;
+  color: #000000;
+  transform: scale(1.1);
+}
+
+.hero .heroImgContainer {
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+}
+
+.hero .heroImgContainer img {
+  height: 100vh;
+  width: auto;
+}
+
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 48px;
+  }
+
+  .hero .Para {
+    font-size: 18px;
+  }
+
+  .heroImgContainer img {
+    height: 60vh;
+  }
+}
+
+
+/************ About Css ************/
+.about{
+  padding: 100px 0;
+}
+.about h2{
+  font-size: 60px;
+  margin-bottom: 15px;
+}
+.about p{
+  font-size: 20px;
+  max-width: 400px;
+}
+
+/************ Client Css ************/
+.client {
+  background-color: white;
+}
+
+.client h2 {
+  font-size: 40px;
+  color: black;
+  text-align: center;
+  letter-spacing: 10px;
+}
+
+.client .imgContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.client .imgContainer img {
+  max-width: 100px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.client .imgContainer img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+  .client .imgContainer img {
+    max-width: 80px;
+  }
+}
+
+@media (max-width: 576px) {
+  .client h2 {
+    font-size: 1.5rem;
+  }
+
+  .client .imgContainer img {
+    max-width: 60px;
+  }
+}
+
+/************ Work Css ************/
+.work{
+  padding: 80px 0;
+  padding-bottom: 50px;
+  /* height: 100vh; */
+}
+
+.work h2{
+  font-size: 40px;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  letter-spacing: 10px;
+}
+
+.work hr{
+  color: rgb(255, 255, 255);
+  opacity: 100%;
+  width: 60%;
+}
+/************ WorkPage Css ************/
+/* Updated styling for the workPage class */
+/* Dark-themed styling for the workPage class */
+/* Dark-themed styling for the workPage class */
+.workPage {
+  padding: 120px 30px 80px; /* Adjusted padding */
+  background-color: #121212; /* Dark background */
+  color: #e0e0e0; /* Light text color */
+}
+
+.workPage h2 {
+  font-size: 4.5rem; /* Extra large font for main headings */
+  font-weight: 700; /* Bold font weight */
+  color: #ffffff; /* White color for headings */
+  margin-bottom: 35px; /* Space below the heading */
+}
+
+.workPage h3 {
+  font-size: 3.5rem; /* Larger font for subheadings */
+  font-weight: 600; /* Semi-bold font */
+  color: #ffffff; /* Accent blue color for headings */
+  padding: 25px 0; /* Space above and below */
+  border-bottom: 3px solid #007bff; /* Blue underline */
+}
+
+.workPage p {
+  font-size: 2rem; /* Significantly larger text for readability */
+  line-height: 2; /* Taller line height for spacing */
+  color: #b0b0b0; /* Muted light gray */
+  margin-bottom: 40px; /* Increased space below paragraphs */
+}
+
+.btnHome {
+  display: inline-block;
+  background-color: #007bff; /* Blue background */
+  color: #fff; /* White text */
+  padding: 16px 35px; /* Larger padding for emphasis */
+  border-radius: 6px; /* Rounded corners */
+  text-decoration: none; /* Remove underline */
+  font-size: 2rem; /* Larger button text */
+  font-weight: 700; /* Bold text */
+  margin-bottom: 35px; /* Space below the button */
+  transition: background-color 0.3s, transform 0.3s; /* Smooth hover effect */
+  box-shadow: 0 5px 15px rgba(0, 123, 255, 0.3); /* Enhanced shadow */
+}
+
+.workPage .btnHome:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+  transform: scale(1.08); /* Slightly larger on hover */
+  box-shadow: 0 7px 20px rgba(0, 123, 255, 0.5); /* Stronger hover shadow */
+}
+
+iframe {
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.1); /* Soft shadow around iframe */
+  border-radius: 8px; /* Rounded corners */
+  margin-bottom: 40px; /* Space below iframe */
+}
+
+/* Media queries for responsive design */
+@media (max-width: 768px) {
+  .workPage {
+    padding: 90px 20px 50px; /* Adjusted padding for smaller screens */
+  }
+
+  .workPage h2 {
+    font-size: 3.5rem; /* Adjust font size for smaller screens */
+  }
+
+  .workPage h3 {
+    font-size: 2.75rem; /* Adjust font size for smaller screens */
+  }
+
+  .workPage p {
+    font-size: 1.3rem; /* Adjust body text for smaller screens */
+  }
+
+  .workPage .btnHome {
+    padding: 14px 28px; /* Adjust padding for smaller screens */
+    font-size: 1.25rem; /* Adjust font size for smaller screens */
+  }
+}
+
+.media-container-wrapper{
+  padding: 20px 0;
+}
+
+.media-container {
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
+  align-items: center; /* Center items horizontally */
+  gap: 20px; /* Space between link and video */
+  padding: 20px;
+  border: 2px solid #343a40; /* Dark border */
+  border-radius: 10px;
+  background-color: #212529; /* Dark background */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Darker shadow */
+  transition: box-shadow 0.3s ease;
+  max-width: 300px; /* Restrict width for better layout */
+  margin: 0 auto; /* Center the container horizontally */
+}
+
+.media-container:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.8); /* Stronger shadow on hover */
+}
+
+.media-link {
+  color: #00aaff; /* Light blue text */
+  font-weight: bold;
+  font-size: 18px;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  text-align: center; /* Center text */
+}
+
+.media-link:hover {
+  color: #00ccff; /* Brighter blue on hover */
+  text-decoration: underline;
+}
+
+.media-video {
+  width: 100%; /* Make video responsive */
+  height: auto;
+  border-radius: 8px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  filter: brightness(80%); /* Dim the video slightly */
+}
+
+.media-video:hover {
+  transform: scale(1.05); /* Slight zoom effect on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6); /* Stronger shadow on hover */
+  filter: brightness(100%); /* Restore video brightness on hover */
+}
+
+/************ Footer Css ************/
+
+.footer{
+  padding: 80px 0;
+}
+
+.footer h2{
+  font-size: 80px;
+  padding: 20px;
+}
+
+.footer h3 {
+  font-size: 30px;
+}
+
+.footer p {
+  font-size: 18px;
+}
+
+.footer .imgWrapper {
+  width: 100%; /* Full width of the parent */
+  height: 100%; /* Full height of the parent */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.footer .profile {
+  width: 100%; /* Force the image to fill the full width */
+  height: 100%; /* Force the image to fill the full height */
+  object-fit: cover; /* Stretches the image without preserving aspect ratio */
+}
+
+.footer .iconWrapper {
+  max-width: 50px;
+  margin-right: 30px;
+}
+
+.footer hr{
+  color: rgb(255, 255, 255);
+  opacity: 100%;
+}
+.sendMessageButton {
+  background-color: #f26a2e; /* Customize button color */
+  border: none;
+  padding: 10px 20px;
+  color: white;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.sendMessageButton:hover {
+  background-color: #e35b1f; /* Darken the button on hover */
+}
+
+.footer form {
+  margin-top: 20px;
+}
+
+.footer textarea {
+  resize: none;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.footer textarea::placeholder {
+  font-size: 18px; /* Adjust this value to change the font size */
+  color: #999; /* Optional: Change the color of the placeholder */
+}
+
+/* This will ensure that the email text wraps */
+.footer .email-wrapper{
+  word-wrap: break-word;    /* For breaking long words */
+  overflow-wrap: break-word; /* For modern browsers */
+  word-break: break-all;     /* For breaking long words in older browsers */
+}
+
+/************ AddWorkCard Css ************/
+.add-workcard-container p {
+  font-size: 16px; /* Ensure the text is large enough */
+  color: #333; /* Ensure the text color contrasts with the background */
+}
+.add-workcard-container {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 30px;
+  background-color: #f0f0f0;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Container hover effect */
+.add-workcard-container:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Form Title */
+.add-workcard-container .form-title {
+  text-align: center;
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 25px;
+  color: #333;
+  letter-spacing: 1px;
+}
+
+/* Form Group Styling */
+.add-workcard-container .custom-form .form-group {
+  margin-bottom: 20px;
+}
+
+/* Input and Textarea Styling */
+.add-workcard-container .custom-form .form-control {
+  border-radius: 6px;
+  padding: 15px;
+  font-size: 18px;
+  transition: all 0.3s ease;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Input Hover and Focus Effects */
+.add-workcard-container .custom-form .form-control:hover {
+  background-color: #e9f7ff;
+}
+
+.add-workcard-container .custom-form .form-control:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 8px rgba(0, 123, 255, 0.6);
+  background-color: #f9f9f9;
+}
+
+/* Button Styling */
+.add-workcard-container .custom-form .submit-btn {
+  display: block;
+  width: 100%;
+  background-color: #007bff;
+  color: white;
+  padding: 12px;
+  font-size: 20px;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Button Hover Effect */
+.add-workcard-container .custom-form .submit-btn:hover {
+  background-color: #0056b3;
+  transform: translateY(-3px);
+}
+
+/* Larger Select Dropdown */
+.add-workcard-container .custom-form select.form-control {
+  font-size: 18px;
+  padding: 10px;
+}
+
+/* Input Labels */
+.add-workcard-container .custom-form .form-label {
+  font-size: 20px;
+  color: #555;
+  margin-bottom: 8px;
+}
+
+/************ Sign in Css ************/
+.sign-out-btn {
+  background-color: #ff5c5c;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  border: none;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.sign-out-btn:hover {
+  background-color: #ff3b3b;
+}
+
+/* Blogpage */
+/* BlogPage Full-Screen Styling */
+.blogPage-container {
+  width: 100vw; /* Full screen width */
+  max-width: 100%;
+  padding: 50px 5%; /* Larger padding to make it more spaced out */
+  background-color: #1a1a1a; /* Dark background */
+  color: #e6e6e6; /* Light font color */
+  border-radius: 0; /* Remove rounded corners for full width */
+  box-shadow: none; /* Remove shadow for cleaner full-screen look */
+  font-family: 'Lato', sans-serif; /* Modern font choice */
+  margin: 0 auto;
+}
+
+/* Loading text styling */
+.blogPage-loading {
+  text-align: center;
+  font-size: 2rem;
+  color: #e6e6e6;
+}
+
+/* Blog title styling */
+.blogPage-title {
+  font-size: 4rem; /* Bigger title */
+  font-weight: 900;
+  margin-bottom: 30px;
+  text-align: center;
+  color: #ffffff; /* Vibrant color for the title */
+  text-transform: uppercase; /* Make the title stand out */
+  letter-spacing: 3px;
+  border-bottom: 3px solid #ffffff; /* Underline with matching color */
+  padding-bottom: 20px;
+}
+
+/* Title image styling */
+.blogPage-image {
+  width: 50%; /* Smaller image size */
+  height: auto;
+  border-radius: 15px; /* Slightly larger border-radius for framing */
+  margin: 40px auto; /* Center the image */
+  display: block;
+  object-fit: cover;
+  border: 5px solid #333; /* Thicker border for more emphasis */
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.6); /* Add depth to the image */
+}
+
+/* Blog small description styling */
+.blogPage-description {
+  font-size: 2.5rem; /* Medium-large text */
+  line-height: 1.8;
+  color: #ccc; /* Slightly lighter text color */
+  margin-bottom: 40px;
+  text-align: justify;
+  padding: 0 15%;
+}
+
+/* Blog content container */
+.blogPage-content {
+  font-size: 2.5rem; /* Adjusted for readability */
+  line-height: 1.9;
+  color: #e0e0e0;
+  margin-top: 20px;
+  padding: 0 10%; /* Extra padding for content */
+}
+
+/* Rich text block content styling */
+.blogPage-block-content {
+  margin-bottom: 40px;
+  border-left: 5px solid #444;
+  padding-left: 20px;
+  font-size: 2rem;
+  line-height: 2;
+  color: #d0d0d0;
+}
+
+/* Image inside the content blocks */
+.blogPage-content-image {
+  width: 40%; /* Make content images smaller */
+  height: auto;
+  border-radius: 10px;
+  margin: 20px auto;
+  display: block;
+  object-fit: cover;
+  border: 2px solid #555;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.6); /* Add some depth */
+}
+
+/* Additional styling for text inside content blocks */
+.blogPage-content p {
+  margin-bottom: 25px;
+  font-size: 2rem;
+  line-height: 2;
+  color: #f0f0f0;
+}
+
+/* Headings inside content blocks */
+.blogPage-content h2,
+.blogPage-content h3 {
+  color: #ff6f61; /* Matching title color */
+  margin-top: 40px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+
+/* Blockquote styling */
+.blogPage-content blockquote {
+  border-left: 5px solid #666;
+  padding-left: 15px;
+  font-style: italic;
+  color: #bbb;
+  margin: 40px 0;
+}
