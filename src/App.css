@@ -395,7 +395,16 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   width: auto;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 576px) {
+  .hero{
+    padding-top: 100px;
+  }
+}
+
+@media (max-width: 768px) and (min-width: 576px) {
+  .hero{
+    padding-top: 100px;
+  }
   .hero h1 {
     font-size: 48px;
   }

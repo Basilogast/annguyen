@@ -57,7 +57,7 @@ export const Hero = () => {
           <Col xs={12} md={6} xl={6}>
             <TrackVisibility>
               {({ isVisible }) => (
-                <div className="textContainer">
+                <div className="textContainer p-4">
                   <div
                     className={
                       isVisible ? "animate__animated animate__fadeIn" : ""
