@@ -25,6 +25,10 @@ export default function BlogPage() {
             _type == 'videoFile' => {
               "fileUrl": asset->url,
               "fileType": asset->mimeType
+            },
+            _type == 'pdfFile' => {
+              "fileUrl": asset->url,
+              "fileType": asset->mimeType
             }
           }
         }`;
@@ -109,6 +113,7 @@ export default function BlogPage() {
       {/* Blog Content */}
       <div className="blogPage-content">
         {blog.content?.map((block, index) => {
+          // console.log("Block Content:", block);
           if (block._type === "block") {
             // Render rich text content
             return (
@@ -131,13 +136,29 @@ export default function BlogPage() {
           }
 
           if (block._type === "videoFile") {
-            console.log("Video URL:", block.fileUrl);
+            // console.log("Video URL:", block.fileUrl);
             // Render video file if available
             return (
               <video key={index} className="blogPage-content-video" controls>
                 <source src={block.fileUrl} type="video/mp4" />
                 Your browser does not support the video tag.
               </video>
+            );
+          }
+
+          if (block._type === "pdfFile") {
+            console.log("PDF URL:", block.fileUrl);
+            // Render PDF file if available
+            return (
+              <div key={index} className="blogPage-content-pdf">
+                <iframe
+                  src={block.fileUrl}
+                  width="100%"
+                  height="600px"
+                  title="PDF Document"
+                  style={{ border: "none" }}
+                ></iframe>
+              </div>
             );
           }
 
