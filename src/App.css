@@ -817,12 +817,13 @@ iframe {
 .blogPage-container {
   width: 100vw;
   max-width: 1200px; /* Limit the width for better readability */
-  margin: 0 auto;
+  margin: 30px auto;
   padding: 60px 20px;
   background: linear-gradient(145deg, #1e1e1e, #262626); /* Gradient background */
   border-radius: 15px; /* Softer corners */
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); /* Smooth shadow for depth */
   color: #e6e6e6;
+  font-family: 'Roboto', sans-serif; /* Use a clean, modern font */
 }
 
 /* Loading text styling */
@@ -836,28 +837,29 @@ iframe {
 
 /* Blog title styling */
 .blogPage-title {
-  font-size: 4.5rem;
+  font-size: 4.2rem; /* Slightly smaller title for better balance */
   font-weight: 800;
   margin-bottom: 40px;
   text-align: center;
   color: #f8f8f8;
   text-transform: uppercase;
-  letter-spacing: 4px;
+  letter-spacing: 3px;
   padding-bottom: 20px;
-  background: linear-gradient(90deg, #ff8a00, #da1b60);
+  background: linear-gradient(90deg, #3eb8f5, #6e2de6);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent; /* Gradient text effect */
-  border-bottom: 2px solid #ff8a00; /* Subtle underline */
+  border-bottom: 2px solid #3eb8f5; /* Subtle underline */
 }
 
 /* Title image styling */
 .blogPage-image {
-  width: 60%; /* Adjusted image size */
+  width: 80%; /* Adjusted image size to span 80% of the container */
   height: auto;
+  max-height: 600px;
   border-radius: 20px; /* Softer rounded corners */
   margin: 50px auto;
   display: block;
-  object-fit: cover;
+  object-fit: cover; /* Crop the image as needed */
   border: 4px solid #444;
   box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.8); /* Smoother shadow */
   transition: transform 0.3s ease; /* Add a hover effect */
@@ -869,28 +871,27 @@ iframe {
 
 /* Blog small description styling */
 .blogPage-description {
-  font-size: 2.2rem;
-  line-height: 1.7;
-  color: #cccccc;
-  margin-bottom: 40px;
+  font-size: 2rem; /* Reduced font size slightly for description */
+  line-height: 1.8; /* More compact line spacing for easier reading */
+  color: #cccccc;  /* Lighter text color */
+  margin: 0 8% 30px;
+  padding: 0 2%;
   text-align: justify;
-  padding: 0 10%;
+  border-left: 4px solid #444;
 }
 
 /* Blog content container */
 .blogPage-content {
-  font-size: 2.2rem;
-  line-height: 1.9;
-  color: #dcdcdc;
-  margin-top: 20px;
-  padding: 0 8%;
+  font-size: 2.1rem; /* Slightly larger for better readability */
+  line-height: 1.9;  /* More relaxed line spacing */
+  color: #e0e0e0;    /* Slightly lighter color */
+  margin-bottom: 40px;
+  padding: 0 8%;     /* Slightly narrower padding */
 }
 
 /* Rich text block content styling */
 .blogPage-block-content {
   margin-bottom: 40px;
-  border-left: 4px solid #444;
-  padding-left: 20px;
   font-size: 2rem;
   line-height: 1.9;
   color: #dcdcdc;
@@ -898,7 +899,8 @@ iframe {
 
 /* Image inside the content blocks */
 .blogPage-content-image {
-  width: 45%;
+  width: 80%;
+  max-height: 600px;
   height: auto;
   border-radius: 15px;
   margin: 20px auto;
@@ -915,30 +917,38 @@ iframe {
 
 /* Additional styling for text inside content blocks */
 .blogPage-content p {
+  font-weight: 400;
   margin-bottom: 25px;
   font-size: 2rem;
-  line-height: 2;
-  color: #f5f5f5;
+  line-height: 1.85; /* Slightly more compact line spacing */
+  color: #f5f5f5;    /* Brighter color for contrast */
+  text-align: justify;
 }
 
 /* Headings inside content blocks */
 .blogPage-content h2,
 .blogPage-content h3 {
-  color: #ff8a00; /* Bright orange for headings */
+  color: #3eb8f5; /* Bright orange for headings */
   margin-top: 40px;
   margin-bottom: 20px;
   text-transform: uppercase;
   letter-spacing: 1.5px;
-  border-bottom: 2px solid #ff8a00; /* Underline */
+  border-bottom: 2px solid #3eb8f5; /* Underline */
   padding-bottom: 10px;
+  font-weight: 700;
 }
 
 /* Blockquote styling */
 .blogPage-content blockquote {
-  border-left: 5px solid #ff8a00; /* Accent color */
+  border-left: 5px solid #3eb8f5; /* Accent color */
   padding-left: 15px;
   font-style: italic;
   color: #e0e0e0;
   margin: 40px 0;
-  font-size: 1.8rem;
+  font-size: 1.9rem; /* Slightly larger blockquote text */
+  line-height: 1.8;
+  background-color: rgba(255, 255, 255, 0.05); /* Light background for emphasis */
+  padding: 15px;
+  border-radius: 10px;
 }
+
