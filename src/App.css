@@ -952,3 +952,19 @@ iframe {
   border-radius: 10px;
 }
 
+/* Video styling */
+.blogPage-content-video {
+  width: 80%; /* Adjusted video size to span 80% of the container */
+  height: auto; /* Automatic height adjustment */
+  max-height: 600px; /* Limit maximum height */
+  border-radius: 15px; /* Softer rounded corners */
+  margin: 20px auto; /* Center alignment with margin */
+  display: block; /* Block display for centering */
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.7); /* Smoother shadow */
+  transition: transform 0.3s ease; /* Smooth hover effect */
+}
+
+.blogPage-content-video:hover {
+  transform: scale(1.03); /* Subtle hover scale effect */
+}
+

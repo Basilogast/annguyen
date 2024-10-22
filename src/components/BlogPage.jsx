@@ -12,7 +12,23 @@ export default function BlogPage() {
   useEffect(() => {
     const fetchBlog = async () => {
       try {
-        const query = `*[_type == 'blog' && slug.current == $slug][0]`;
+        const query = `*[_type == 'blog' && slug.current == $slug][0]{
+          title,
+          titleImage,
+          smallDescription,
+          content[] {
+            ...,
+            _type == 'file' => {
+              "fileUrl": asset->url,
+              "fileType": asset->mimeType
+            },
+            _type == 'videoFile' => {
+              "fileUrl": asset->url,
+              "fileType": asset->mimeType
+            }
+          }
+        }`;
+
         const data = await client.fetch(query, { slug });
 
         if (!data) {
@@ -108,9 +124,20 @@ export default function BlogPage() {
               <img
                 key={index}
                 className="blogPage-content-image"
-                src={urlFor(block).url()}
-                alt={block.alt || "Image"}
+                src={urlFor(block.asset).url()} // Use urlFor to get the correct URL for images
+                alt={block.alt || "Image"} // Use block.alt for accessibility if available
               />
+            );
+          }
+
+          if (block._type === "videoFile") {
+            console.log("Video URL:", block.fileUrl);
+            // Render video file if available
+            return (
+              <video key={index} className="blogPage-content-video" controls>
+                <source src={block.fileUrl} type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
             );
           }
 
