@@ -22,9 +22,10 @@ export const Work = ({ workCards, signedInUser }) => {
 
   const styles = {
     pin_container: {
-      margin: "0 auto",
-      padding: 0,
-      width: "80vw",
+      margin: "0 auto !important",
+      padding: "0",
+      width: "100%", 
+      maxWidth: "80vw",
       display: "grid",
       gridTemplateColumns: "repeat(auto-fill, 300px)",
       gridAutoRows: "10px",

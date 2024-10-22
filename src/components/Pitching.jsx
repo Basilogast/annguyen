@@ -10,9 +10,10 @@ export const Pitching = ({ pitchCards, signedInUser }) => {
     pin_container: {
       margin: "0 auto",
       padding: 0,
-      width: "40vw",
+      width: "100%", 
+      maxWidth: "40vw",
       display: "grid",
-      gridTemplateColumns: "repeat(auto-fill, 250px)",
+      gridTemplateColumns: "repeat(auto-fill, 260px)",
       gridAutoRows: "10px",
       justifyContent: "center",
       backgroundColor: "#121212",

@@ -178,6 +178,7 @@ export const AddWorkCard = ({ addNewWorkCard, targetTable }) => {
               value={workData.size}
               onChange={handleInputChange}
             >
+              <option value="exsmall">Exsmall</option>
               <option value="small">Small</option>
               <option value="medium">Medium</option>
               <option value="large">Large</option>

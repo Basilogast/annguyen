@@ -815,88 +815,102 @@ iframe {
 /* Blogpage */
 /* BlogPage Full-Screen Styling */
 .blogPage-container {
-  width: 100vw; /* Full screen width */
-  max-width: 100%;
-  padding: 50px 5%; /* Larger padding to make it more spaced out */
-  background-color: #1a1a1a; /* Dark background */
-  color: #e6e6e6; /* Light font color */
-  border-radius: 0; /* Remove rounded corners for full width */
-  box-shadow: none; /* Remove shadow for cleaner full-screen look */
-  font-family: 'Lato', sans-serif; /* Modern font choice */
+  width: 100vw;
+  max-width: 1200px; /* Limit the width for better readability */
   margin: 0 auto;
+  padding: 60px 20px;
+  background: linear-gradient(145deg, #1e1e1e, #262626); /* Gradient background */
+  border-radius: 15px; /* Softer corners */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); /* Smooth shadow for depth */
+  color: #e6e6e6;
 }
 
 /* Loading text styling */
 .blogPage-loading {
   text-align: center;
-  font-size: 2rem;
-  color: #e6e6e6;
+  font-size: 2.5rem;
+  color: #ffffff;
+  margin-top: 100px;
+  font-weight: 600;
 }
 
 /* Blog title styling */
 .blogPage-title {
-  font-size: 4rem; /* Bigger title */
-  font-weight: 900;
-  margin-bottom: 30px;
+  font-size: 4.5rem;
+  font-weight: 800;
+  margin-bottom: 40px;
   text-align: center;
-  color: #ffffff; /* Vibrant color for the title */
-  text-transform: uppercase; /* Make the title stand out */
-  letter-spacing: 3px;
-  border-bottom: 3px solid #ffffff; /* Underline with matching color */
+  color: #f8f8f8;
+  text-transform: uppercase;
+  letter-spacing: 4px;
   padding-bottom: 20px;
+  background: linear-gradient(90deg, #ff8a00, #da1b60);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; /* Gradient text effect */
+  border-bottom: 2px solid #ff8a00; /* Subtle underline */
 }
 
 /* Title image styling */
 .blogPage-image {
-  width: 50%; /* Smaller image size */
+  width: 60%; /* Adjusted image size */
   height: auto;
-  border-radius: 15px; /* Slightly larger border-radius for framing */
-  margin: 40px auto; /* Center the image */
+  border-radius: 20px; /* Softer rounded corners */
+  margin: 50px auto;
   display: block;
   object-fit: cover;
-  border: 5px solid #333; /* Thicker border for more emphasis */
-  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.6); /* Add depth to the image */
+  border: 4px solid #444;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.8); /* Smoother shadow */
+  transition: transform 0.3s ease; /* Add a hover effect */
+}
+
+.blogPage-image:hover {
+  transform: scale(1.05); /* Slight hover scale effect */
 }
 
 /* Blog small description styling */
 .blogPage-description {
-  font-size: 2.5rem; /* Medium-large text */
-  line-height: 1.8;
-  color: #ccc; /* Slightly lighter text color */
+  font-size: 2.2rem;
+  line-height: 1.7;
+  color: #cccccc;
   margin-bottom: 40px;
   text-align: justify;
-  padding: 0 15%;
+  padding: 0 10%;
 }
 
 /* Blog content container */
 .blogPage-content {
-  font-size: 2.5rem; /* Adjusted for readability */
+  font-size: 2.2rem;
   line-height: 1.9;
-  color: #e0e0e0;
+  color: #dcdcdc;
   margin-top: 20px;
-  padding: 0 10%; /* Extra padding for content */
+  padding: 0 8%;
 }
 
 /* Rich text block content styling */
 .blogPage-block-content {
   margin-bottom: 40px;
-  border-left: 5px solid #444;
+  border-left: 4px solid #444;
   padding-left: 20px;
   font-size: 2rem;
-  line-height: 2;
-  color: #d0d0d0;
+  line-height: 1.9;
+  color: #dcdcdc;
 }
 
 /* Image inside the content blocks */
 .blogPage-content-image {
-  width: 40%; /* Make content images smaller */
+  width: 45%;
   height: auto;
-  border-radius: 10px;
+  border-radius: 15px;
   margin: 20px auto;
   display: block;
   object-fit: cover;
-  border: 2px solid #555;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.6); /* Add some depth */
+  border: 3px solid #666;
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.7); /* Deeper shadow */
+  transition: transform 0.3s ease;
+}
+
+.blogPage-content-image:hover {
+  transform: scale(1.03); /* Subtle hover effect */
 }
 
 /* Additional styling for text inside content blocks */
@@ -904,24 +918,27 @@ iframe {
   margin-bottom: 25px;
   font-size: 2rem;
   line-height: 2;
-  color: #f0f0f0;
+  color: #f5f5f5;
 }
 
 /* Headings inside content blocks */
 .blogPage-content h2,
 .blogPage-content h3 {
-  color: #ff6f61; /* Matching title color */
+  color: #ff8a00; /* Bright orange for headings */
   margin-top: 40px;
   margin-bottom: 20px;
   text-transform: uppercase;
   letter-spacing: 1.5px;
+  border-bottom: 2px solid #ff8a00; /* Underline */
+  padding-bottom: 10px;
 }
 
 /* Blockquote styling */
 .blogPage-content blockquote {
-  border-left: 5px solid #666;
+  border-left: 5px solid #ff8a00; /* Accent color */
   padding-left: 15px;
   font-style: italic;
-  color: #bbb;
+  color: #e0e0e0;
   margin: 40px 0;
+  font-size: 1.8rem;
 }

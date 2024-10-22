@@ -53,7 +53,7 @@ function WorkCard({ id, img, text, size, pdfUrl, textPara, detailsRoute, signedI
       ? '0 8px 15px rgba(0, 0, 0, 0.3)' // Enhanced shadow on hover
       : '0 4px 6px rgba(0, 0, 0, 0.1)', // Default shadow
     transform: hover ? 'scale(1.05)' : 'scale(1)', // Enlarge effect on hover
-    gridRowEnd: size === 'small' ? 'span 26' : size === 'medium' ? 'span 33' : 'span 45',
+    gridRowEnd: size === 'exsmall' ? 'span 20' : size === 'small' ? 'span 26' : size === 'medium' ? 'span 33' : 'span 45',
   };
 
   const mediaStyles = {

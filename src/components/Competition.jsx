@@ -16,9 +16,10 @@ export const Competition = ({ comCards, signedInUser }) => {
     pin_container: {
       margin: "0 auto",
       padding: 0,
-      width: "40vw",
+      width: "100%", 
+      maxWidth: "40vw",
       display: "grid",
-      gridTemplateColumns: "repeat(auto-fill, 400px)",
+      gridTemplateColumns: "repeat(auto-fill, 260px)",
       gridAutoRows: "10px",
       justifyContent: "center",
       backgroundColor: "#121212",
@@ -87,7 +88,7 @@ export const Competition = ({ comCards, signedInUser }) => {
             />
           ))}
            <WorkCard
-            size="small"
+            size="exsmall"
             img={com1vid}
             text="L'OREAL BRANDSTORM 2024"
             pdfUrl={com1pdf}
@@ -101,7 +102,7 @@ export const Competition = ({ comCards, signedInUser }) => {
             signedInUser={signedInUser} // Pass signedInUser to WorkCard
           />
           <WorkCard
-            size="small"
+            size="exsmall"
             img={com2vid}
             text="L'OREAL BRANDSTORM 2024"
             pdfUrl={com2pdf}

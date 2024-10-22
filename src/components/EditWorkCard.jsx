@@ -207,6 +207,7 @@ function EditWorkCard() {
               onChange={handleInputChange}
               className="form-control"
             >
+              <option value="exsmall">Exsmall</option>
               <option value="small">Small</option>
               <option value="medium">Medium</option>
               <option value="large">Large</option>
