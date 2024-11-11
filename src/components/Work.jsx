@@ -157,7 +157,7 @@ export const Work = ({ workCards, signedInUser }) => {
               "+ Plan and organize new product and brand launch events: bartender masterclass, consumer masterclass, VIP dinner event",
               "+ Brief ideas and quality control for POSM design and manage productions of stakeholders to ensure the quality",
             ]}
-            detailsRoute=""
+            detailsRoute="/blog/thedalmore"
             signedInUser={signedInUser} // Pass signedInUser to WorkCard
           />
           <WorkCard
@@ -194,7 +194,7 @@ export const Work = ({ workCards, signedInUser }) => {
               "+ Take responsibility for every phase and every task of the campaign",
               "+ Catch up job progress and address any issues of the team to solve and give directions",
             ]}
-            detailsRoute=""
+            detailsRoute="/blog/celadon"
             signedInUser={signedInUser} // Pass signedInUser to WorkCard
           />
           <WorkCard
