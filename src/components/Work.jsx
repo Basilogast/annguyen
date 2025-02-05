@@ -15,7 +15,7 @@ import LYNpdf from "../assets/pdf/REPORT KOC _ LYN.pdf";
 import HPpdf from "../assets/pdf/THE LAMP X BV HẠNH PHÚC PROPOSAL.pdf";
 import HKpdf from "../assets/pdf/Hong Kong MX Moon Cake x The Lamp.pdf";
 import CELApdf from "../assets/pdf/CELADON BOULEVARD_DIGITAL PROPOSAL 2024.pdf";
-import DALpdf from "../assets/pdf/_Internal_Catalyst_2024.pdf";
+import DALpdf from "../assets/pdf/LUXEMALT.pdf";
 
 export const Work = ({ workCards, signedInUser }) => {
   const [hover, setHover] = useState(false);
@@ -197,7 +197,7 @@ export const Work = ({ workCards, signedInUser }) => {
             detailsRoute="/blog/celadon"
             signedInUser={signedInUser} // Pass signedInUser to WorkCard
           />
-          <WorkCard
+          {/* <WorkCard
             size="small"
             img={HONGKONGimg}
             text="HONG KONG Mooncake Digital Campaign"
@@ -213,7 +213,7 @@ export const Work = ({ workCards, signedInUser }) => {
             ]}
             detailsRoute="/HONGKONGMooncake"
             signedInUser={signedInUser} // Pass signedInUser to WorkCard
-          />
+          /> */}
         </div>
       </Container>
     </section>
