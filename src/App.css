@@ -853,9 +853,9 @@ iframe {
 
 /* Title image styling */
 .blogPage-image {
-  width: 80%; /* Adjusted image size to span 80% of the container */
+  width: 80%;
   height: auto;
-  max-height: 600px;
+  /* max-height: 600px; */
   border-radius: 20px; /* Softer rounded corners */
   margin: 50px auto;
   display: block;
@@ -900,7 +900,7 @@ iframe {
 /* Image inside the content blocks */
 .blogPage-content-image {
   width: 80%;
-  max-height: 600px;
+  /* max-height: 600px; */
   height: auto;
   border-radius: 15px;
   margin: 20px auto;
